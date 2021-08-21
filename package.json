@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/andikabahari/docker-node-ts#readme",
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "nodemon": "^2.0.12",
     "ts-node": "^10.2.1",
     "ts-node-dev": "^1.1.8",
