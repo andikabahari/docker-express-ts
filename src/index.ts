@@ -2,13 +2,16 @@ import express from "express";
 import path from "path";
 
 const app = express();
-const port: number = 5000;
+
+const HOST: string = "0.0.0.0";
+const PORT: number = 5000;
 
 app.get("/", (req, res) => {
-  const file: string = path.join(__dirname, "pages", "index.html");
+  const basepath: string = process.cwd();
+  const file: string = path.join(basepath, "src", "pages", "index.html");
   res.sendFile(file);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}.`);
+app.listen(PORT, HOST, () => {
+  console.log(`Running on http://${HOST}:${PORT}`);
 });
